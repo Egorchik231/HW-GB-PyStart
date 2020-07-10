@@ -1,16 +1,21 @@
-time = int(input('Введите время в секундах: '))
+this_li = []
+i = int(input('How many elements do you wnat to enter? '))
+a = i
+while a > 0:
+    this_li.append(input('Enter element to put it to list: '))
+    a -= 1
 
-hh = time//3600
-min = (time - hh*60*60)//60
-sec = (time - hh*60*60 - min*60)
+q = 0
 
-if len(str(hh)) < 2:
-    hh = '0' + str(hh)
+res_li = []
+while q <= i - 2:
+    res_li.append(this_li[q + 1])
+    res_li.append(this_li[q])
+    q += 2
+if len(this_li)%2 != 0:
+    res_li.append(this_li[i-1])
 
-if len(str(min)) < 2:
-    min = '0' + str(min)
 
-if len(str(sec)) < 2:
-    sec = '0' + str(sec)
 
-print(f'{hh}:{min}:{sec}')
+
+print(res_li)

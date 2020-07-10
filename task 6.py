@@ -1,9 +1,27 @@
-a = int(input('введите а: '))
-b = int(input('Введите b: '))
+products = []
+quantity = int(input('How many products do you want to add? '))
 
-day = 1
-while a<b:
-    a *= 1.1
-    day += 1
+i = 1
+while i <= quantity:
+    name = input('Enter name: ')
+    price = input('Enter price: ')
+    q2 = input('Enter quantity: ')
+    tp = input('Enter unit: ')
+    tpl = (i, {'название': name, 'цена': price, 'количество': q2, 'eд': tp})
+    products.append(tpl)
+    i += 1
 
-print(day)
+statisticks = {'название':[], 'цена':[], 'количество':[], 'eд':[]}
+
+for tpl in products:
+    i=0
+    for k in statisticks.keys():
+        statisticks[k].append(tpl[1][k])
+
+
+
+
+
+
+print(products,'\n',statisticks)
+

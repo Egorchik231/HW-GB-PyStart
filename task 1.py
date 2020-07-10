@@ -1,8 +1,5 @@
-numb = 1
-letter = 'a'
-word = 'hello'
+my_list = [1, 'str', False, {1:0}, 1.0]
 
-print(f'{numb} {letter} {word}')
+for item in my_list:
+    print(type(item))
 
-say = input('Введите что хотите: ')
-print(say)

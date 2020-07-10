@@ -1,16 +1,11 @@
-revenue = int(input('Введите выручку: '))
-cost = int(input('Введите издержки: '))
+rating = [1, 5, 8, 6, 4, 4, 7, 9, 8, 9, 2, 1, 4]
+a = int(input('Enter new place: '))
 
-if revenue > cost:
-    profit = revenue - cost
-    print('Фирма работает в прибыль')
-    profitability = profit / revenue
-    pers = int(input('Введите количество сотрудников: '))
-    profit_per_pes = profit / pers
-    # В задании не сказано выводить значение
-    # рентабельности и прибыли в расчёте на сотрудника
-    # print(f'Рентабельность составляет {profitability},/n
-    # а прибыль на сотрудника {profit_per_pes}')
-
+rating.sort()
+if a in rating:
+    rating.insert(rating.index(a), a)
 else:
-    print("Фирма работает в убыток")
+    rating.append(a)
+rating.sort()
+rating.reverse()
+print(rating)
