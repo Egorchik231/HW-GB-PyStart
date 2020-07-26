@@ -23,11 +23,9 @@ class Car:
 
 class TownCar(Car):
     def show_speed(self):
+        super().show_speed()
         if self.speed > 60:
-            print(f'Speed is {self.speed}')
             print('Your speed is too high. Drop it immediately')
-        else:
-            print(f'Speed is {self.speed}')
 
 
 class SportCar(Car):
@@ -36,12 +34,9 @@ class SportCar(Car):
 
 class WorkCar(Car):
     def show_speed(self):
+        super().show_speed()
         if self.speed > 40:
-            print(f'Speed is {self.speed}')
             print('Your speed is too high. Drop it immediately')
-
-        else:
-            print(f'Speed is {self.speed}')
 
 
 class PoliceCar(Car):
